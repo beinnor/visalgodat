@@ -1,0 +1,57 @@
+html {
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  display: grid;
+  grid-template-rows: min-content 100%;
+  grid-template-columns: 1fr 9fr;
+  grid-template-areas:
+    "header header"
+    "sidebar main";
+}
+
+header {
+  grid-area: header;
+  text-align: center;
+  background: lightgray;
+}
+
+#sidebar {
+  grid-area: sidebar;
+  padding: 1rem;
+  background: lightgray;
+}
+
+#output {
+  grid-area: main;
+  width: 100%;
+
+  padding: 1rem;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 1rem 1rem 1rem 3rem;
+}
+
+td {
+  border: 1px solid black;
+  padding: 1rem;
+}
+
+.stepTable {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+button {
+  margin: 1rem;
+}
