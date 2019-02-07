@@ -1,4 +1,6 @@
-import { bubbleSort, selectionSort } from "/js/algorithms.js";
+import { selectionSort } from "/js/selectionSort.js";
+import { bubbleSort } from "/js/bubbleSort.js";
+import { insertionSort } from "/js/insertionSort.js";
 import {
   printStepArrayColor,
   printStepArrayNoColor,
@@ -10,14 +12,23 @@ import {
 export const outputNode = document.getElementById("output");
 let originalArray;
 
-// Button
+// ---------------- Buttons ----------------------
+
+// new array button
 const newArrayBtn = document.getElementById("newArrayBtn");
+newArrayBtn.addEventListener("click", () => {
+  clear();
+  originalArray = randomArray(10, 0, 9);
+  printOriginalArray(originalArray);
+});
+
 // Selectionsort Button
 const selectionSortBtn = document.getElementById("startSelectionSortBtn");
 selectionSortBtn.addEventListener("click", () => {
   // dont do anything if an array isn't set
   if (originalArray) {
     selectionSort(originalArray);
+    originalArray = "";
   }
 });
 
@@ -27,13 +38,29 @@ bubbleSortBtn.addEventListener("click", () => {
   // dont do anything if an array isn't set
   if (originalArray) {
     bubbleSort(originalArray);
+    originalArray = "";
   }
 });
 
-newArrayBtn.addEventListener("click", () => {
-  clear();
-  originalArray = randomArray(10, 0, 9);
-  printOriginalArray(originalArray);
+// Insertionsort Button
+const insertionSortBtn = document.getElementById("startInsertionSortBtn");
+insertionSortBtn.addEventListener("click", () => {
+  // dont do anything if an array isn't set
+  if (originalArray) {
+    insertionSort(originalArray);
+    originalArray = "";
+  }
+});
+
+// Quicksort Button
+const quickSortBtn = document.getElementById("startQuickSortBtn");
+quickSortBtn.addEventListener("click", () => {
+  alert("button is not working yet");
+  // dont do anything if an array isn't set
+  if (originalArray) {
+    //quickSort(originalArray);
+    //originalArray = "";
+  }
 });
 
 // Clear outputbutton
