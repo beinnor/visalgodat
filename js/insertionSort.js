@@ -3,7 +3,7 @@ import {
   printStepArrayNoColor,
   printOriginalArray,
   printFinalArray
-} from "/js/view.js";
+} from "./view.js";
 
 /**
  * Insertion sort iterates, consuming one input element each repetition,

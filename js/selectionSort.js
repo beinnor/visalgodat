@@ -3,7 +3,7 @@ import {
   printStepArrayNoColor,
   printOriginalArray,
   printFinalArray
-} from "/js/view.js";
+} from "./view.js";
 
 /**
  * Selection sort

@@ -1,5 +1,13 @@
-function quickSort(array) {
+import {
+  printStepArrayColor,
+  printStepArrayNoColor,
+  printOriginalArray,
+  printFinalArray
+} from "./view.js";
+
+export function quickSort(array) {
   recursiveSort(array, 0, array.length - 1);
+  printFinalArray(array);
 }
 
 function recursiveSort(array, start, end) {
@@ -41,7 +49,9 @@ function partition(array, low, high) {
  * Swaps indexes a and b in array arr
  */
 function swap(arr, a, b) {
+  printStepArrayColor(arr, [a, b]);
   let temp = arr[a];
   arr[a] = arr[b];
   arr[b] = temp;
+  printStepArrayNoColor(arr);
 }

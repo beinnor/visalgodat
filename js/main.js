@@ -1,12 +1,13 @@
-import { selectionSort } from "/js/selectionSort.js";
-import { bubbleSort } from "/js/bubbleSort.js";
-import { insertionSort } from "/js/insertionSort.js";
+import { selectionSort } from "./selectionSort.js";
+import { bubbleSort } from "./bubbleSort.js";
+import { insertionSort } from "./insertionSort.js";
+import { quickSort } from "./quickSort.js";
 import {
   printStepArrayColor,
   printStepArrayNoColor,
   printOriginalArray,
   printFinalArray
-} from "/js/view.js";
+} from "./view.js";
 
 // Globals
 export const outputNode = document.getElementById("output");
@@ -55,11 +56,10 @@ insertionSortBtn.addEventListener("click", () => {
 // Quicksort Button
 const quickSortBtn = document.getElementById("startQuickSortBtn");
 quickSortBtn.addEventListener("click", () => {
-  alert("button is not working yet");
   // dont do anything if an array isn't set
   if (originalArray) {
-    //quickSort(originalArray);
-    //originalArray = "";
+    quickSort(originalArray);
+    originalArray = "";
   }
 });
 
