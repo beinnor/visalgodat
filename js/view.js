@@ -1,4 +1,4 @@
-import { outputNode } from "/js/main.js";
+import { outputNode } from "./main.js";
 
 // Print a an array in tableform
 export function printOriginalArray(myArray) {
